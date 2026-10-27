@@ -1,0 +1,66 @@
+# ==============================================================================
+# Critical Privacy Rules - Never commit or expose private business data
+# ==============================================================================
+
+# Private Excel and raw datasets
+data/private/
+data/**/*.xlsx
+data/**/*.xls
+data/**/*.csv
+data/**/*.xlsm
+data/*.xlsx
+data/*.xls
+data/*.csv
+
+# Allow only synthetic demonstration datasets explicitly
+!data/synthetic_demo_*.csv
+
+# Generated private reports, summaries, and plots
+reports/plots/
+reports/*.csv
+reports/*.json
+reports/private/
+!reports/report_template.md
+!reports/README.md
+
+# Local-Only MLflow tracking and experiment artifacts
+mlruns/
+mlartifacts/
+*.db
+mlruns.db
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+
+# Python virtual environments and caches
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook checkpoints and hidden files
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Screenshots that might contain private metrics or UI data
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+!screenshots/.gitkeep
+!screenshots/README.md
+
+# System logs and scratch files
+*.log
+logs/
+scratch/
+.DS_Store
+Thumbs.db
